@@ -28,6 +28,10 @@ ul {
   list-style: none;
 }
 
+li:last-child {
+  margin-bottom: 0;
+}
+
 a {
   color: currentColor;
   text-decoration: none;
@@ -252,4 +256,101 @@ img {
 
 .serv-sub-span {
   color: #caff33;
+}
+
+/* ========== about-us ========== */
+
+.about-title {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #caff33;
+
+  text-align: center;
+
+  margin-bottom: 15px;
+}
+
+.about-back {
+  width: 300px;
+  height: 300px;
+
+  border-radius: 50%;
+
+  background-image: url('../images/about-us/sec-1x.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  margin: 0 auto 15px;
+}
+
+.about-par {
+  font-size: 12px;
+  line-height: 1.5;
+
+  text-align: center;
+
+  margin-bottom: 15px;
+}
+
+.about-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 15px;
+}
+
+.about-circle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100px;
+  height: 100px;
+
+  margin-bottom: 15px;
+
+  border-radius: 50%;
+
+  background-image: linear-gradient(
+    180deg,
+    #caff33 0%,
+    rgba(202, 255, 51, 0) 100%
+  );
+
+  z-index: 0;
+}
+
+.about-circle::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  content: '';
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+
+  background-image: linear-gradient(
+    180deg,
+    #caff33 0%,
+    rgba(202, 255, 51, 0) 100%
+  );
+
+  z-index: 1;
+}
+
+.about-svg {
+  width: 34px;
+  height: 34px;
+}
+
+.about-sub-par {
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
 }
