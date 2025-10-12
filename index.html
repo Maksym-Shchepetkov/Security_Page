@@ -35,6 +35,14 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
@@ -79,126 +87,134 @@
 
     <main>
       <section class="hero">
-        <div class="container">
-          <h1>
-            Охоронна фірма "Яструб" - <span>професійна охорона</span> у
+        <div class="container hero-cont">
+          <h1 class="hero-title">
+            Охоронна фірма "Яструб" -
+            <span class="hero-title-span">професійна охорона</span> у
             Хмельницькому та області
           </h1>
-          <p>
+          <p class="hero-par">
             Відкрийте новий рівень безпеки разом із компанією “Яструб”. Ми понад
             10 років забезпечуємо охорону бізнесу, заводів, складів, ферм і
             сонячних електростанцій У Хмельницькому регіоні. Гарантуємо надійний
             захист, сучасні технології та індивідуальний підхід
           </p>
-          <button>ПРИЄДНУЙСЯ</button>
-          <picture>
-            <source
-              srcset="
-                ./images/hero/woman-desk.webp    1x,
-                ./images/hero/woman-desk-2x.webp 2x
-              "
-              media="(min-width: 1280px)" />
-            <source
-              srcset="
-                ./images/hero/woman-tab.webp    1x,
-                ./images/hero/woman-tab-2x.webp 2x
-              "
-              media="(min-width: 768px)" />
-            <source
-              srcset="
-                ./images/hero/woman-mob.webp    1x,
-                ./images/hero/woman-mob-2x.webp 2x
-              "
-              media="(max-width: 768px)" />
-            <img
-              src="./images/hero/woman-desk.webp"
-              alt="жінка охоронник в чорній формі"
-          /></picture>
-          <picture>
-            <source
-              srcset="
-                ./images/hero/man-desk.webp    1x,
-                ./images/hero/man-desk-2x.webp 2x
-              "
-              media="(min-width: 1280px)" />
-            <source
-              srcset="
-                ./images/hero/man-tab.webp    1x,
-                ./images/hero/man-tab-2x.webp 2x
-              "
-              media="(min-width: 768px)" />
-            <source
-              srcset="
-                ./images/hero/man-mob.webp    1x,
-                ./images/hero/man-mob-2x.webp 2x
-              "
-              media="(max-width: 768px)" />
-            <img
-              src="./images/hero/man-desk.webp"
-              alt="чоловік охоронник в чорній формі"
-          /></picture>
+          <button class="hero-btn">ПРИЄДНУЙСЯ</button>
+          <div class="hero-picture-cont">
+            <picture class="hero-first-picture">
+              <source
+                srcset="
+                  ./images/hero/woman-desk-bg.webp    1x,
+                  ./images/hero/woman-desk-2x-bg.webp 2x
+                "
+                media="(min-width: 1280px)" />
+              <source
+                srcset="
+                  ./images/hero/woman-tab-bg.webp    1x,
+                  ./images/hero/woman-tab-2x-bg.webp 2x
+                "
+                media="(min-width: 768px)" />
+              <source
+                srcset="
+                  ./images/hero/woman-mob-bg.webp    1x,
+                  ./images/hero/woman-mob-2x-bg.webp 2x
+                "
+                media="(max-width: 768px)" />
+              <img
+                class="hero-w"
+                src="./images/hero/woman-desk-bg.webp"
+                alt="жінка охоронник в чорній формі"
+            /></picture>
+            <picture class="hero-second-picture">
+              <source
+                srcset="
+                  ./images/hero/man-desk-bg.webp    1x,
+                  ./images/hero/man-desk-2x-bg.webp 2x
+                "
+                media="(min-width: 1280px)" />
+              <source
+                srcset="
+                  ./images/hero/man-tab-bg.webp    1x,
+                  ./images/hero/man-tab-2x-bg.webp 2x
+                "
+                media="(min-width: 768px)" />
+              <source
+                srcset="
+                  ./images/hero/man-mob-bg.webp    1x,
+                  ./images/hero/man-mob-2x-bg.webp 2x
+                "
+                media="(max-width: 768px)" />
+              <img
+                src="./images/hero/man-desk-bg.webp"
+                alt="чоловік охоронник в чорній формі"
+            /></picture>
+          </div>
         </div>
       </section>
       <section class="services">
         <div class="container">
-          <h2>Наші <span>Послуги</span></h2>
-          <p>
+          <h2 class="serv-title">
+            Наші <span class="serv-title-span">Послуги</span>
+          </h2>
+          <p class="serv-par">
             Discover a range of comprehensive and customizable banking products
             at YourBank, designed to suit your unique financial needs and
             aspirations
           </p>
-          <ul>
-            <li>
-              <div>
-                <svg>
+          <ul class="serv-list">
+            <li class="serv-item">
+              <div class="serv-circle">
+                <svg class="serv-svg">
                   <use href="./images/sprite.svg#icon-solar"></use>
                 </svg>
               </div>
-              <h3>Охорона сонячних електростанцій</h3>
-              <p>
+              <h3 class="serv-sub-title">Охорона сонячних електростанцій</h3>
+              <p class="serv-sub-par">
                 Ми забезпечуємо надійний захист сонячних електростанцій від
                 крадіжок, вандалізму та несанкціонованого доступу. Наші охоронці
                 цілодобово контролюють периметр, здійснюють патрулювання
-                території та фіксують усі події.
-                <span
+                території та фіксують усі події.<br />
+                <span class="serv-sub-span"
                   >Мета - безперебійна робота вашої станції та збереження
                   дороговартісного обладнання</span
                 >
               </p>
             </li>
             <span></span>
-            <li>
-              <div>
-                <svg>
+            <li class="serv-item">
+              <div class="serv-circle">
+                <svg class="serv-svg">
                   <use href="./images/sprite.svg#icon-factory"></use>
                 </svg>
               </div>
-              <h3>Охорона заводів та виробничих підприємств</h3>
-              <p>
+              <h3 class="serv-sub-title">
+                Охорона заводів та виробничих підприємств
+              </h3>
+              <p class="serv-sub-par">
                 Наші фахівці гарантують безпеку промислових об'єктів будь-якого
                 маштабу. Ми організовуємо пости охорони, перевірку транспорту й
                 персоналу, контролюємо в'їзд та виїзд вантажів, Здійснюємо
-                внутрішній нагляд.
-                <span
+                внутрішній нагляд.<br />
+                <span class="serv-sub-span"
                   >Мета - запобігання крадіжкам, аваріям і забезпечення
                   стабільної роботи виробництва</span
                 >
               </p>
             </li>
             <span></span>
-            <li>
-              <div>
-                <svg>
+            <li class="serv-item">
+              <div class="serv-circle">
+                <svg class="serv-svg">
                   <use href="./images/sprite.svg#icon-farm"></use>
                 </svg>
               </div>
-              <h3>Охорона тракторних станів та ферм</h3>
-              <p>
+              <h3 class="serv-sub-title">Охорона тракторних станів та ферм</h3>
+              <p class="serv-sub-par">
                 Ми знаємо, наскільки важливе збереження техніки, пального та
                 врожаю. Наші охоронці забезпечують цілодобовий нагляд за
                 територією, контролюють доступ сторонніх осіб і ведуть
-                патрулювання в нічний час.
-                <span
+                патрулювання в нічний час.<br />
+                <span class="serv-sub-span"
                   >Мета - повна безпека вашого сільськогосподарського майна та
                   техніки</span
                 >
