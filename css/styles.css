@@ -56,6 +56,8 @@ img {
   padding-bottom: 20px;
 }
 
+/* ================================= header ================================ */
+
 .header-cont {
   display: flex;
   align-items: center;
@@ -107,7 +109,7 @@ img {
   height: 14px;
 }
 
-/* ========hero======== */
+/* ================================= hero ================================ */
 
 .hero-cont {
   padding-top: 40px;
@@ -163,7 +165,7 @@ img {
   gap: 10px;
 }
 
-/* ========= services ============ */
+/* ================================= services ================================ */
 
 .serv-title {
   font-size: 28px;
@@ -258,7 +260,7 @@ img {
   color: #caff33;
 }
 
-/* ========== about-us ========== */
+/* ================================= about-us ================================ */
 
 .about-title {
   font-size: 20px;
@@ -355,7 +357,7 @@ img {
   text-align: center;
 }
 
-/* ========= vacancies =========== */
+/* ================================= vacancies ================================ */
 
 .vac-title {
   font-size: 28px;
@@ -499,7 +501,7 @@ img {
   color: #1c1c1c;
 }
 
-/* ===== animation ====== */
+/* ================================= animation ================================ */
 
 @keyframes ripple {
   0% {
@@ -515,7 +517,49 @@ img {
   }
 }
 
-/* ============ sub-branches ============ */
+@keyframes ripple1 {
+  0% {
+    box-shadow: none;
+  }
+
+  40% {
+    box-shadow: 0 0 0 0 rgba(202, 255, 51, 0.4),
+      0 0 0 1em rgba(202, 255, 51, 0.3), 0 0 0 3em rgba(202, 255, 51, 0.1),
+      0 0 0 5em rgba(202, 255, 51, 0.05);
+  }
+
+  100% {
+    box-shadow: 0 0 0 1em rgba(202, 255, 51, 0.3),
+      0 0 0 3em rgba(202, 255, 51, 0.1), 0 0 0 5em rgba(202, 255, 51, 0.05),
+      0 0 0 8em rgba(202, 255, 51, 0.02);
+  }
+}
+
+/* ================================= sub-branches ================================ */
+
+.branch-title {
+  font-size: 28px;
+  line-height: 1.5;
+
+  text-align: center;
+
+  margin-bottom: 10px;
+}
+
+.branch-title-span {
+  color: #caff33;
+}
+
+.branch-par {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #b3b3b3;
+
+  text-align: center;
+
+  margin-bottom: 25px;
+}
+
 .branch-list {
   display: flex;
   flex-direction: column;
@@ -532,10 +576,16 @@ img {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #ffffff;
+  background-image: linear-gradient(
+    180deg,
+    rgba(202, 255, 51, 2),
+    rgba(212, 255, 100, 1)
+  );
   border-radius: 50%;
+
   width: 90px;
   height: 90px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -546,13 +596,18 @@ img {
 .circle-icon::after {
   content: '';
   position: absolute;
-  background-color: green;
+  background-image: linear-gradient(
+    180deg,
+    rgba(245, 245, 220, 0.6),
+    rgba(245, 245, 220, 0.4)
+  );
 
   border-radius: 50%;
 
   width: 60px;
   height: 60px;
 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 2;
 }
 
@@ -572,9 +627,8 @@ img {
   mask: radial-gradient(circle 95px, transparent 90px, white 99%);
 }
 
-.circle-icon img {
-  width: 50px;
-  height: 50px;
+.circle-icon-svg {
+  z-index: 2;
 }
 
 .circle-content {
@@ -604,9 +658,92 @@ img {
   bottom: 15%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #ffffff;
+
+  background-color: #f5f5dc;
+
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  animation: ripple 0.6s infinite;
+  animation: ripple1 1s infinite;
+}
+
+/* ================================= objects ================================ */
+
+.ob-title {
+  font-size: 28px;
+  line-height: 1.5;
+
+  text-align: center;
+
+  margin-bottom: 10px;
+}
+
+.ob-par {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #b3b3b3;
+
+  text-align: center;
+
+  margin-bottom: 40px;
+}
+
+.ob-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  border: 1px solid #262626;
+  border-radius: 12px;
+
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 358px;
+  height: 290px;
+
+  overflow: hidden;
+
+  margin-bottom: 30px;
+}
+
+.ob-item {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  border-radius: 12px;
+
+  background-color: #007bff;
+}
+
+.ob-img {
+  width: 250px;
+  height: 250px;
+
+  object-fit: cover;
+}
+
+.ob-slider-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.ob-slider-btn {
+  border: 1px solid #262626;
+  border-radius: 100px;
+
+  padding: 12px;
+  width: 52px;
+  height: 52px;
+
+  background-color: #1c1c1c;
+}
+
+.ob-slider-svg {
+  width: 25px;
+  height: 25px;
 }
