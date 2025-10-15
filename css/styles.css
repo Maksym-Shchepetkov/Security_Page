@@ -922,6 +922,7 @@ img {
   }
 
   .mob-menu-btn {
+    position: relative;
     display: block;
     padding: 0;
     width: 0;
@@ -933,6 +934,19 @@ img {
     border-left: 30px solid transparent;
     border-right: 30px solid transparent;
     border-top: 30px solid #caff33;
+  }
+
+  .mob-menu-btn::after {
+    content: '';
+    position: absolute;
+    top: -28px;
+    left: -8px;
+    width: 16px;
+    height: 16px;
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+    transform: rotate(45deg);
+    z-index: 1;
   }
 
   .mob-menu-svg {
