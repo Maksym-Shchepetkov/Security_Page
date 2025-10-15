@@ -871,7 +871,7 @@ img {
 
 /* ================================= Styles for Tablet devices ================================ */
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 768px) {
   .container {
     max-width: 900px;
     padding: 40px 32px;
