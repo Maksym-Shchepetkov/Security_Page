@@ -49,7 +49,8 @@ img {
 }
 
 .container {
-  max-width: 1440px;
+  min-width: 320px;
+  max-width: 390px;
 
   margin: 0 auto;
   padding-top: 20px;
@@ -67,7 +68,6 @@ img {
   border-radius: 100px;
 
   padding: 0px 14px 0px 14px;
-  height: 68px;
 
   background-color: #1c1c1c;
 }
@@ -92,6 +92,10 @@ img {
 }
 
 .header-nav {
+  display: none;
+}
+
+.contact-btn {
   display: none;
 }
 
@@ -863,4 +867,70 @@ img {
   font-size: 14px;
   line-height: 1.5;
   color: #e4e4e7;
+}
+
+/* ================================= Styles for Tablet devices ================================ */
+
+@media only screen and (min-width: 900px) {
+  .container {
+    max-width: 900px;
+    padding: 40px 32px;
+  }
+
+  /* ================================= header-tab ================================ */
+
+  .header-cont {
+    padding: 0 24px;
+  }
+
+  .logo-link {
+    padding: 0;
+  }
+
+  .header-nav {
+    display: flex;
+  }
+
+  .header-list {
+    display: flex;
+    gap: 26px;
+  }
+
+  .header-link {
+    display: block;
+    padding: 37px 0;
+
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .contact-btn {
+    display: block;
+
+    border-radius: 82px;
+    background-color: #caff33;
+
+    padding: 12px 24px;
+    width: 112px;
+    height: 45px;
+
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1c1c1c;
+  }
+
+  .mob-menu-btn {
+    display: none;
+  }
+
+  /* ================================= header-tablet ================================ */
+}
+
+/* ================================= Styles for Desktop devices ================================ */
+
+@media only screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    padding: 50px 65px;
+  }
 }
