@@ -118,17 +118,15 @@ img {
 
   padding-top: 14px;
   padding-bottom: 14px;
+
+  font-size: 20px;
+  line-height: 1.5;
+  color: #fcfcfd;
 }
 
 .logo-img {
   width: 40px;
   height: 40px;
-}
-
-.logo-par {
-  font-size: 20px;
-  line-height: 1.5;
-  color: #fcfcfd;
 }
 
 .header-nav {
@@ -965,14 +963,143 @@ img {
     display: none;
   }
 
-  /* ================================= header-tablet ================================ */
+  /* ================================= hero-tab ================================ */
+
+  .hero-cont {
+    position: relative;
+    padding-top: 40px;
+    max-width: 900px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-title {
+    font-size: 38px;
+
+    width: 550px;
+    text-align: start;
+
+    margin: 0 auto 10px;
+  }
+
+  .hero-par {
+    font-size: 16px;
+
+    width: 550px;
+    text-align: start;
+
+    margin: 0 auto 40px;
+  }
+
+  .hero-btn {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1c1c1c;
+
+    margin: 0 auto;
+
+    background-color: #caff33;
+  }
+
+  .hero-picture-cont {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    width: 100%;
+    max-width: 900px;
+
+    z-index: -1;
+  }
+
+  .hero-w {
+    height: 380px;
+  }
+
+  .hero-m {
+    height: 380px;
+    justify-self: end;
+  }
 }
 
 /* ================================= Styles for Desktop devices ================================ */
 
 @media only screen and (min-width: 1280px) {
+  body {
+    padding-top: 50px;
+  }
+
   .container {
-    max-width: 1280px;
+    max-width: 1440px;
     padding: 50px 65px;
+  }
+
+  /* ================================= header-desktop ================================ */
+
+  .header-cont {
+    padding: 0 34px;
+  }
+
+  .logo-link {
+    padding: 0;
+
+    font-size: 24px;
+  }
+
+  .logo-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .header-nav {
+    display: block;
+  }
+
+  .header-link {
+    position: relative;
+    display: block;
+    padding: 37px 0;
+
+    font-size: 18px;
+    line-height: 1.5;
+
+    z-index: 1;
+  }
+
+  .header-link::before {
+    content: '';
+
+    z-index: -1;
+  }
+
+  .header-link:hover::before,
+  .header-link:focus::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 82px;
+
+    min-width: 110px;
+    height: 51px;
+
+    background-color: #262626;
+  }
+
+  .contact-btn {
+    padding: 14px 30px;
+    width: 142px;
+    height: 55px;
+
+    font-size: 18px;
+  }
+
+  .mob-menu-btn {
+    display: none;
   }
 }
