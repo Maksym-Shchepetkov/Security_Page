@@ -968,7 +968,6 @@ img {
   .hero-cont {
     position: relative;
     padding-top: 40px;
-    max-width: 900px;
 
     display: flex;
     flex-direction: column;
@@ -1011,6 +1010,7 @@ img {
 
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0;
     width: 100%;
     max-width: 900px;
 
