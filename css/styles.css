@@ -191,7 +191,6 @@ img {
   width: 145px;
   height: 49px;
 
-  font-family: 'Russo One', sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: #1c1c1c;
@@ -994,13 +993,14 @@ img {
   }
 
   .hero-btn {
+    border-radius: 82px;
+    padding: 14px 24px;
+    width: 145px;
+    height: 49px;
+
     font-size: 14px;
     line-height: 1.5;
     color: #1c1c1c;
-
-    margin: 0 auto;
-
-    background-color: #caff33;
   }
 
   .hero-picture-cont {
@@ -1029,6 +1029,53 @@ img {
   .hero-m {
     height: 380px;
   }
+
+  /* ================================= sevices-tab ================================ */
+
+  .serv-title {
+    font-size: 38px;
+
+    text-align: start;
+
+    margin-bottom: 10px;
+  }
+
+  .serv-par {
+    font-size: 16px;
+
+    text-align: start;
+
+    margin-bottom: 80px;
+  }
+
+  .serv-list {
+    display: flex;
+    gap: 10px;
+  }
+
+  .serv-item {
+    margin-bottom: 0;
+  }
+
+  .serv-sub-title {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .serv-sub-par {
+    font-size: 14px;
+  }
+
+  .serv-span-line {
+    display: block;
+    border: 1px solid #262626;
+    width: 0px;
+    height: 374px;
+  }
+
+  .serv-sub-span {
+    color: #caff33;
+  }
 }
 
 /* ================================= Styles for Desktop devices ================================ */
@@ -1040,7 +1087,7 @@ img {
 
   .container {
     max-width: 1440px;
-    padding: 50px 65px;
+    padding: 20px 0;
   }
 
   /* ================================= header-desktop ================================ */
@@ -1105,5 +1152,48 @@ img {
 
   .mob-menu-btn {
     display: none;
+  }
+
+  /* ================================= hero-desktop ================================ */
+
+  .hero-cont {
+    padding-top: 40px;
+    height: 844px;
+  }
+
+  .hero-title {
+    font-size: 44px;
+
+    width: 957px;
+    height: 144px;
+    text-align: start;
+
+    margin: 0 auto 40px;
+  }
+
+  .hero-par {
+    font-size: 18px;
+
+    width: 957px;
+  }
+
+  .hero-btn {
+    padding: 14px 30px;
+    width: 184px;
+    height: 55px;
+
+    font-size: 18px;
+  }
+
+  .hero-picture-cont {
+    max-width: 1440px;
+  }
+
+  .hero-w {
+    height: 644px;
+  }
+
+  .hero-m {
+    height: 644px;
   }
 }
