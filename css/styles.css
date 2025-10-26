@@ -878,7 +878,7 @@ img {
 @media only screen and (min-width: 768px) {
   .container {
     max-width: 900px;
-    padding: 40px 32px;
+    padding: 15px 0;
   }
 
   /* ================================= header-tab ================================ */
@@ -967,7 +967,7 @@ img {
 
   .hero-cont {
     position: relative;
-    padding-top: 40px;
+    padding-top: 30px;
 
     display: flex;
     flex-direction: column;
@@ -975,10 +975,10 @@ img {
   }
 
   .hero-title {
-    font-size: 34px;
+    font-size: 38px;
 
     width: 550px;
-    height: 144px;
+    height: 170px;
     text-align: start;
 
     margin: 0 auto 10px;
