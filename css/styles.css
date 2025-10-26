@@ -876,6 +876,7 @@ img {
 
 @media only screen and (min-width: 768px) {
   .container {
+    position: relative;
     max-width: 900px;
     padding: 15px 0;
   }
@@ -1073,8 +1074,137 @@ img {
     height: 374px;
   }
 
-  .serv-sub-span {
-    color: #caff33;
+  /* ================================= about-us-tab ================================ */
+
+  .about-cont {
+    position: relative;
+    width: 100%;
+    height: 600px;
+  }
+
+  .about-title {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    font-size: 32px;
+
+    text-align: start;
+
+    margin-bottom: 15px;
+    z-index: 1;
+  }
+
+  .about-back {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 350px;
+    height: 350px;
+
+    margin: 0;
+    z-index: 0;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('../images/about-us/sec-1x.webp');
+  }
+
+  .about-par {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    font-size: 10px;
+    width: 300px;
+
+    text-align: center;
+
+    margin-bottom: 15px;
+  }
+
+  .about-list {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+
+    width: 100%;
+    max-width: 900px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+  }
+
+  .about-list li:nth-child(odd) {
+    justify-self: start;
+  }
+
+  .about-list li:nth-child(even) {
+    justify-self: end;
+  }
+
+  .about-item {
+    width: 287px;
+
+    justify-self: center;
+
+    margin-bottom: 0;
+  }
+
+  .about-circle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100px;
+    height: 100px;
+
+    margin-bottom: 15px;
+
+    border-radius: 50%;
+
+    background-image: linear-gradient(
+      180deg,
+      #caff33 0%,
+      rgba(202, 255, 51, 0) 100%
+    );
+
+    z-index: 0;
+  }
+
+  .about-circle::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    content: '';
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+
+    background-image: linear-gradient(
+      180deg,
+      #caff33 0%,
+      rgba(202, 255, 51, 0) 100%
+    );
+
+    z-index: 1;
+  }
+
+  .about-svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .about-sub-par {
+    font-size: 10px;
+    width: 130px;
   }
 }
 
@@ -1196,4 +1326,56 @@ img {
   .hero-m {
     height: 644px;
   }
+
+  /* ================================= sevices-desktop ================================ */
+
+  .serv-title {
+    font-size: 48px;
+
+    margin-bottom: 14px;
+  }
+
+  .serv-par {
+    font-size: 16px;
+
+    margin-bottom: 100px;
+  }
+
+  .serv-list {
+    display: flex;
+    gap: 50px;
+  }
+
+  .serv-circle {
+    margin: 0 auto 30px;
+    padding: 12px;
+    width: 98px;
+    height: 98px;
+  }
+
+  .serv-circle::after {
+    padding: 20px;
+    width: 74px;
+    height: 74px;
+  }
+
+  .serv-svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .serv-sub-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .serv-sub-par {
+    font-size: 18px;
+  }
+
+  .serv-span-line {
+    height: 463px;
+  }
+
+  /* ================================= about-us-desktop ================================ */
 }
