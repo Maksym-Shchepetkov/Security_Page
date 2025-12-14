@@ -436,6 +436,8 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  margin-bottom: 20px;
 }
 
 .vac-item {
@@ -455,10 +457,6 @@ img {
   grid-template-columns: 1fr max-content;
   grid-template-rows: max-content 1fr;
   row-gap: 20px;
-}
-
-.vac-item:last-child {
-  margin-bottom: 20px;
 }
 
 .vac-svg {
@@ -490,17 +488,23 @@ img {
 .vac-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: stretch;
   gap: 25px;
 
   border-radius: 12px;
 
   max-width: 366px;
-  min-height: 590px;
+  min-height: 520px;
   margin: 0 auto;
 
   background-color: #1c1c1c;
+}
+
+.vac-form-right {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .vac-img {
@@ -542,6 +546,7 @@ img {
   padding: 14px 24px;
   width: 181px;
   height: 55px;
+  margin: 0 auto;
 
   background-color: #caff33;
 
@@ -1223,6 +1228,124 @@ img {
     font-size: 10px;
     width: 130px;
   }
+
+  /* ================================= vacancies-tab ================================ */
+
+  .vac-title {
+    font-size: 38px;
+
+    text-align: start;
+  }
+
+  .vac-par {
+    font-size: 16px;
+
+    text-align: start;
+
+    margin-bottom: 60px;
+  }
+
+  .vac-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .vac-item {
+    position: relative;
+
+    padding: 40px;
+    margin-bottom: 0;
+    flex: 1 1 366px;
+    min-width: 366px;
+    max-width: 430px;
+    height: 300px;
+
+    row-gap: 24px;
+  }
+
+  .vac-sub-title {
+    font-size: 18px;
+  }
+
+  .vac-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    max-width: 900px;
+    min-width: 768px;
+    min-height: 300px;
+  }
+
+  .vac-form-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 430px;
+    padding: 20px;
+  }
+
+  .vac-form-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 430px;
+    padding: 20px;
+  }
+
+  .vac-form-par {
+    font-size: 16px;
+  }
+
+  .vac-form-label {
+    gap: 15px;
+  }
+
+  .vac-form-btn {
+    margin: 0 auto;
+  }
+
+  /* ================================= sub-branches-tab ================================ */
+
+  .branch-title {
+    font-size: 38px;
+
+    text-align: start;
+  }
+
+  .branch-par {
+    font-size: 16px;
+
+    text-align: start;
+
+    margin-bottom: 60px;
+  }
+
+  .branch-list {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .wrapper {
+    width: 300px;
+  }
+
+  .branch-sub-title {
+    font-size: 16px;
+
+    margin-bottom: 0;
+  }
+
+  .branch-loc {
+    font-size: 14px;
+  }
 }
 
 /* ================================= Styles for Desktop devices ================================ */
@@ -1515,5 +1638,155 @@ img {
     font-size: 18px;
     width: 100%;
     max-width: 300px;
+  }
+
+  /* ================================= vacancies-desktop ================================ */
+  .vac-cont {
+    position: relative;
+
+    height: 1250px;
+  }
+
+  .vac-title {
+    font-size: 48px;
+
+    margin-bottom: 15px;
+  }
+
+  .vac-par {
+    font-size: 18px;
+
+    margin-bottom: 60px;
+  }
+
+  .vac-list {
+    position: absolute;
+    top: 200px;
+    right: 0;
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+
+    width: 65vw;
+    max-width: 1020px;
+
+    margin-bottom: 0;
+  }
+
+  .vac-item {
+    position: static;
+    flex: 1 1 390px;
+
+    border: 1px solid #262626;
+    border-radius: 10px;
+
+    max-width: 490px;
+    padding: 50px;
+    margin-bottom: 0;
+    height: 500px;
+  }
+
+  .vac-sub-title {
+    font-size: 22px;
+  }
+
+  .vac-sub-par {
+    font-size: 18px;
+  }
+
+  .vac-form {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 25px;
+
+    border-radius: 12px;
+
+    min-width: 430px;
+    min-height: 520px;
+    margin: 0 auto;
+
+    background-color: #1c1c1c;
+  }
+
+  .vac-form-right {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .vac-form-par {
+    font-size: 16px;
+    line-height: 1.5;
+
+    text-align: center;
+  }
+
+  .vac-form-label {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .vac-form-input {
+    border-radius: 140px;
+
+    padding: 14px 24px;
+    width: 300px;
+    height: 55px;
+
+    text-align: center;
+
+    text-decoration: none;
+  }
+
+  .vac-form-btn {
+    border-radius: 140px;
+    padding: 14px 24px;
+    width: 181px;
+    height: 55px;
+    margin: 0 auto;
+
+    background-color: #caff33;
+
+    font-size: 18px;
+    line-height: 1.5;
+    color: #1c1c1c;
+  }
+
+  /* ================================= vacancies-desktop ================================ */
+
+  .branch-title {
+    font-size: 48px;
+  }
+
+  .branch-par {
+    font-size: 18px;
+  }
+
+  .branch-list {
+    justify-content: space-around;
+    gap: 0;
+  }
+
+  .wrapper {
+    width: 250px;
+  }
+
+  .branch-sub-title {
+    font-size: 18px;
+  }
+
+  .branch-loc {
+    font-size: 16px;
   }
 }
