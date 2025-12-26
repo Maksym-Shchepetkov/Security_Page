@@ -37,7 +37,7 @@ const firstInputFocus = () => {
   setTimeout(() => {
     const nameInput = document.querySelector('#first-input');
     nameInput.focus();
-  }, 500);
+  }, 2000);
 };
 
 btn.addEventListener('click', () => {
