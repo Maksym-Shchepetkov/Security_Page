@@ -60,6 +60,33 @@
             <use href="./images/sprite.svg#icon-burger"></use>
           </svg>
         </button>
+        <div class="mob-menu">
+          <a class="mob-menu-close-btn"></a>
+          <nav class="mob-menu-nav">
+            <ul class="mob-menu-list">
+              <li class="mob-menu-item">
+                <a class="mob-menu-link" href="./index.html">Головна</a>
+              </li>
+              <li class="mob-menu-item">
+                <a class="mob-menu-link" href="#services-main">Послуги</a>
+              </li>
+              <li class="mob-menu-item">
+                <a class="mob-menu-link" href="#about-main">Про Нас</a>
+              </li>
+              <li class="mob-menu-item">
+                <a class="mob-menu-link" href="#vacancies-main">Вакансії</a>
+              </li>
+              <li class="mob-menu-item">
+                <a class="mob-menu-link" href="#sub-branches-main"
+                  >Підфіліали</a
+                >
+              </li>
+              <li class="mob-menu-item">
+                <a class="mob-menu-link" href="#objects-main">Об'єкти</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
         <nav class="header-nav">
           <ul class="header-list">
             <li class="header-item">
@@ -98,11 +125,13 @@
           </h1>
           <p class="hero-par">
             Відкрийте новий рівень безпеки разом із компанією "Яст-Груп". Ми
-            понад 10 років забезпечуємо охорону бізнесу, заводів, складів, ферм
+            понад 18 років забезпечуємо охорону бізнесу, заводів, складів, ферм
             і сонячних електростанцій У Хмельницькому регіоні. Гарантуємо
             надійний захист, сучасні технології та індивідуальний підхід
           </p>
-          <button class="hero-btn">ПРИЄДНУЙСЯ</button>
+          <a class="hero-btn-link" href="#form-main" id="goToForm"
+            >ПРИЄДНУЙСЯ</a
+          >
           <div class="hero-picture-cont">
             <picture class="hero-first-picture">
               <source
@@ -231,11 +260,11 @@
 
       <section class="about-us">
         <div class="container">
-          <div class="about-cont">
-            <h2 id="about-main" class="about-title">Про Нас</h2>
+          <div id="about-main" class="about-cont">
+            <h2 class="about-title">Про Нас</h2>
             <div class="about-back"></div>
             <p class="about-par">
-              Ми - професійна охоронна компанія з понад 10 - річним досвідом
+              Ми - професійна охоронна компанія з понад 18 - річним досвідом
               роботи у сфері безпеки. Наші фахівці забезпечують надійний захист
               комерційних об'єктів по всій Україні, дотримуючись сучасних
               стандартів охорони та реагування. <br /><br />Ми охороняємо:<br />
@@ -356,20 +385,20 @@
                 <use href="./images/sprite.svg#icon-arrow"></use>
               </svg>
               <h3 class="vac-sub-title">
-                Менеджер з підбору персоналу (Шепетівка)
+                Менеджер з підбору персоналу (Тернопіль)
               </h3>
               <p class="vac-sub-par">
                 У зв'язку з розширенням штату Хмельницького регіонального
                 відділлення охоронної фірми "Яст-Груп", запрошуємо до команди
-                менеджера з підбору персоналу у місті Шепетівка. Обов'язки:
+                менеджера з підбору персоналу у місті Тернопіль. Обов'язки:
                 пошук, відбір і співбесіди з кандидатами, ведення бази
-                персоналу. Зарплата: випробувальний термін - 8000 грн./міс.,
+                персоналу. Зарплата: випробувальний термін - 12000 грн./міс.,
                 далі - за результатами співбесіди.
               </p>
             </li>
           </ul>
 
-          <form class="vac-form">
+          <form id="form-main" class="vac-form">
             <div class="vac-form-left">
               <picture
                 ><source
@@ -399,7 +428,7 @@
             <div class="vac-form-right">
               <p class="vac-form-par">Заповніть форму і ми вам передзвонимо</p>
               <label class="vac-form-label"
-                >Ім'я<input class="vac-form-input" type="text"
+                >Ім'я<input id="first-input" class="vac-form-input" type="text"
               /></label>
               <label class="vac-form-label"
                 >Номер телефону<input class="vac-form-input" type="number"

@@ -97,6 +97,30 @@ img {
   }
 }
 
+@keyframes unfoldIn {
+  0% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+}
+
+@keyframes unfoldOut {
+  0% {
+    transform: scaleY(1) scaleX(1);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+}
+
 /* ================================= header ================================ */
 
 .header-cont {
@@ -151,6 +175,61 @@ img {
   height: 14px;
 }
 
+.mob-menu {
+  display: none;
+}
+
+.mob-menu-is-open {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+
+  background-color: #1c1c1c;
+  z-index: 1000;
+
+  animation: unfoldIn 2s ease;
+}
+
+.mob-menu-close-btn {
+  display: inline-block;
+  margin-left: auto;
+  width: 2px;
+  height: 20px;
+  transform: rotate(45deg);
+  background-color: #ffffff;
+}
+
+.mob-menu-close-btn::before {
+  content: '';
+  display: inline-block;
+  margin-left: auto;
+  width: 2px;
+  height: 20px;
+  transform: rotate(90deg);
+  background-color: #ffffff;
+}
+
+.mob-menu-nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: zoomIn 4s ease;
+}
+
+.mob-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 /* ================================= hero ================================ */
 
 .hero-cont {
@@ -186,6 +265,21 @@ img {
 }
 
 .hero-btn {
+  border-radius: 82px;
+  padding: 14px 24px;
+  width: 145px;
+  height: 49px;
+
+  font-size: 14px;
+  line-height: 1.5;
+  color: #1c1c1c;
+
+  margin: 0 auto 25px;
+
+  background-color: #caff33;
+}
+
+.hero-btn-link {
   border-radius: 82px;
   padding: 14px 24px;
   width: 145px;
@@ -1034,7 +1128,7 @@ img {
     margin: 0 auto 40px;
   }
 
-  .hero-btn {
+  .hero-btn-link {
     border-radius: 82px;
     padding: 14px 24px;
     width: 145px;
@@ -1588,7 +1682,7 @@ img {
     width: 957px;
   }
 
-  .hero-btn {
+  .hero-btn-link {
     padding: 14px 30px;
     width: 184px;
     height: 55px;
