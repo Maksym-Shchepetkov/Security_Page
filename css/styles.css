@@ -194,7 +194,7 @@ img {
   background-color: #1c1c1c;
   z-index: 1000;
 
-  animation: unfoldIn 2s ease;
+  animation: unfoldIn 0.7s ease;
 }
 
 .mob-menu-close-btn {
@@ -221,13 +221,16 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: zoomIn 4s ease;
 }
 
 .mob-menu-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+}
+
+.mob-menu-link {
+  font-size: 16px;
 }
 
 /* ================================= hero ================================ */
