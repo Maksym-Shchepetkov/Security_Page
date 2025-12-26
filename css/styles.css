@@ -713,6 +713,10 @@ img {
 
 /* ================================= objects ================================ */
 
+.ob-container {
+  position: relative;
+}
+
 .ob-title {
   font-size: 28px;
   line-height: 1.5;
@@ -1370,6 +1374,119 @@ img {
   .branch-loc {
     font-size: 14px;
   }
+
+  /* ================================= objects - tablet ================================ */
+
+  .ob-title {
+    font-size: 38px;
+
+    text-align: start;
+
+    margin-bottom: 14px;
+  }
+
+  .ob-par {
+    font-size: 16px;
+
+    text-align: start;
+
+    margin-bottom: 60px;
+  }
+
+  .ob-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    padding: 0;
+    width: 80%;
+    min-width: 600px;
+    max-width: 900px;
+    height: auto;
+
+    margin-bottom: 0;
+  }
+
+  .ob-slider-nav {
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    transform: translate(-70%, -70%);
+    width: 100%;
+    justify-content: space-between;
+    gap: 0;
+    padding: 0 20px;
+  }
+
+  /* ================================= footer ================================ */
+
+  .footer-cont {
+    padding-top: 45px;
+    padding-bottom: 30px;
+  }
+
+  .footer-logo {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    margin-bottom: 30px;
+  }
+
+  .footer-logo-svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .line {
+    max-width: 750px;
+  }
+
+  .footer-nav {
+    display: block;
+
+    margin-bottom: 30px;
+  }
+
+  .footer-nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+  }
+
+  .footer-nav-link {
+    font-size: 16px;
+
+    line-height: 1.5;
+  }
+
+  .footer-adress-link {
+    font-size: 16px;
+  }
+
+  .footer-sub-branches-title {
+    font-size: 16px;
+
+    margin-bottom: 21px;
+  }
+
+  .footer-sub-branches-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer-sub-branches-par {
+    font-size: 16px;
+  }
+
+  .footer-sub-branches-link {
+    font-size: 16px;
+  }
 }
 
 /* ================================= Styles for Desktop devices ================================ */
@@ -1812,5 +1929,73 @@ img {
 
   .branch-loc {
     font-size: 16px;
+  }
+
+  /* ================================= objects - desktop ================================ */
+
+  .ob-title {
+    font-size: 48px;
+  }
+
+  .ob-par {
+    font-size: 18px;
+
+    margin-bottom: 100px;
+  }
+
+  .ob-list {
+    gap: 80px;
+
+    padding: 0;
+    width: 80%;
+    max-width: 1100px;
+    height: 385px;
+  }
+
+  .ob-slider-nav {
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    transform: translate(-70%, -70%);
+    width: 100%;
+    padding: 0 50px;
+  }
+
+  .ob-item {
+    width: 401px;
+    height: 385px;
+  }
+
+  .ob-img {
+    width: 401px;
+    height: 385px;
+  }
+
+  /* ================================= footer - desktop ================================ */
+
+  .line {
+    max-width: 1100px;
+  }
+
+  .footer-nav-link {
+    font-size: 18px;
+  }
+
+  .footer-adress-link {
+    font-size: 18px;
+  }
+
+  .footer-sub-branches-title {
+    font-size: 18px;
+
+    margin-bottom: 21px;
+  }
+
+  .footer-sub-branches-par {
+    font-size: 18px;
+  }
+
+  .footer-sub-branches-link {
+    font-size: 18px;
   }
 }
