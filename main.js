@@ -9,6 +9,10 @@ const closeBtn = document.querySelector('.mob-menu-close-btn');
 const headerAnchorLink = document.querySelectorAll('.header-link');
 const invite = document.querySelector('#goToForm');
 const mainForm = document.querySelector('#form-main');
+const ul = document.querySelector('.ob-list');
+const items = document.querySelectorAll('.ob-item');
+const leftBtn = document.querySelector('#left');
+const rightBtn = document.querySelector('#right');
 
 const openMobMenu = () => {
   mobMenu.classList.add('mob-menu-is-open');
@@ -136,3 +140,47 @@ mainForm.addEventListener('submit', async e => {
     });
   }
 });
+
+let isAnimating = false;
+let step = 0;
+
+function updateStep() {
+  const li = ul.children[0];
+  const gap = parseFloat(getComputedStyle(ul).gap) || 0;
+  step = li.offsetWidth + gap;
+}
+
+updateStep();
+window.addEventListener('resize', updateStep);
+
+function slide(direction) {
+  if (isAnimating) return;
+  isAnimating = true;
+
+  const items = [...ul.children];
+
+  if (direction === -1) {
+    ul.append(items[0]);
+  } else {
+    ul.prepend(items[items.length - 1]);
+  }
+
+  items.forEach(li => {
+    li.style.transition = 'none';
+    li.style.transform = `translateX(${direction * step}px)`;
+  });
+
+  requestAnimationFrame(() => {
+    items.forEach(li => {
+      li.style.transition = 'transform 0.4s ease';
+      li.style.transform = 'translateX(0)';
+    });
+  });
+
+  setTimeout(() => {
+    isAnimating = false;
+  }, 400);
+}
+
+leftBtn.addEventListener('click', () => slide(1));
+rightBtn.addEventListener('click', () => slide(-1));
