@@ -41,6 +41,26 @@ const firstInputFocus = () => {
   }, 1000);
 };
 
+const validateName = name => {
+  if (!name) return 'Введіть імʼя';
+  if (name.length < 3) return 'Імʼя повинно містити мінімум 3 символи';
+  if (!/^[A-Za-zА-Яа-яІіЇїЄє\s]+$/.test(name))
+    return 'Імʼя може містити тільки літери';
+  return null;
+};
+
+const validatePhone = phone => {
+  if (!phone) {
+    return 'Введіть номер телефону';
+  }
+
+  if (!/^\+?\d{10,13}$/.test(phone)) {
+    return 'Невірний формат телефону';
+  }
+
+  return null;
+};
+
 btn.addEventListener('click', () => {
   if (window.matchMedia('(max-width: 767px)').matches) {
     openMobMenu();
@@ -66,22 +86,40 @@ mainForm.addEventListener('submit', async e => {
 
   const f = e.target;
 
+  const name = f.name.value.trim();
+  const phone = f.phone.value.trim();
+
+  const nameError = validateName(name);
+  if (nameError) {
+    iziToast.warning({
+      title: 'Помилка',
+      message: nameError,
+      position: 'topCenter',
+    });
+    return;
+  }
+
+  const phoneError = validatePhone(phone);
+  if (phoneError) {
+    iziToast.warning({
+      title: 'Помилка',
+      message: phoneError,
+      position: 'topCenter',
+    });
+    return;
+  }
+
   try {
     const res = await fetch(
       'https://cold-queen-0b86.mama2009113.workers.dev/',
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: f.name.value,
-          phone: f.phone.value,
-        }),
+        body: JSON.stringify({ name, phone }),
       }
     );
 
-    if (!res.ok) {
-      throw new Error('Server error');
-    }
+    if (!res.ok) throw new Error();
 
     iziToast.success({
       title: 'Готово',
@@ -90,7 +128,7 @@ mainForm.addEventListener('submit', async e => {
     });
 
     mainForm.reset();
-  } catch (err) {
+  } catch {
     iziToast.error({
       title: 'Помилка',
       message: 'Не вдалося відправити форму',
