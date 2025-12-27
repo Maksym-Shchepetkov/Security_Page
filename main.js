@@ -8,6 +8,7 @@ const headerMobMenuLinks = document.querySelectorAll('.mob-menu-link');
 const closeBtn = document.querySelector('.mob-menu-close-btn');
 const headerAnchorLink = document.querySelectorAll('.header-link');
 const invite = document.querySelector('#goToForm');
+const mainForm = document.querySelector('#form-main');
 
 const openMobMenu = () => {
   mobMenu.classList.add('mob-menu-is-open');
@@ -37,7 +38,7 @@ const firstInputFocus = () => {
   setTimeout(() => {
     const nameInput = document.querySelector('#first-input');
     nameInput.focus();
-  }, 2000);
+  }, 1000);
 };
 
 btn.addEventListener('click', () => {
@@ -59,3 +60,21 @@ headerAnchorLink.forEach(link => {
 });
 
 invite.addEventListener('click', firstInputFocus);
+
+mainForm.addEventListener('submit', async e => {
+  e.preventDefault();
+
+  const f = e.target;
+  console.log(f);
+
+  await fetch('https://cold-queen-0b86.mama2009113.workers.dev/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      name: f.name.value,
+      phone: f.phone.value,
+    }),
+  });
+  alert('Відправлено');
+  mainForm.reset();
+});
