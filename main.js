@@ -65,16 +65,36 @@ mainForm.addEventListener('submit', async e => {
   e.preventDefault();
 
   const f = e.target;
-  console.log(f);
 
-  await fetch('https://cold-queen-0b86.mama2009113.workers.dev/', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      name: f.name.value,
-      phone: f.phone.value,
-    }),
-  });
-  alert('Відправлено');
-  mainForm.reset();
+  try {
+    const res = await fetch(
+      'https://cold-queen-0b86.mama2009113.workers.dev/',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: f.name.value,
+          phone: f.phone.value,
+        }),
+      }
+    );
+
+    if (!res.ok) {
+      throw new Error('Server error');
+    }
+
+    iziToast.success({
+      title: 'Готово',
+      message: 'Заявку відправлено!',
+      position: 'topCenter',
+    });
+
+    mainForm.reset();
+  } catch (err) {
+    iziToast.error({
+      title: 'Помилка',
+      message: 'Не вдалося відправити форму',
+      position: 'topCenter',
+    });
+  }
 });
