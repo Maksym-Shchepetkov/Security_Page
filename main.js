@@ -49,8 +49,15 @@ document.querySelectorAll('.vac-item').forEach(li => {
 
 const firstInputFocus = () => {
   setTimeout(() => {
-    const nameInput = document.querySelector('#first-input');
-    nameInput.focus();
+    const input = document.querySelector('#first-input');
+    if (!input) return;
+
+    input.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+    });
+
+    input.focus({ preventScroll: true });
   }, 1000);
 };
 
