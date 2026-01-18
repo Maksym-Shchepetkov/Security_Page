@@ -6,6 +6,8 @@ body {
   font-family: 'Russo One', sans-serif;
   background-color: #1a1a1a;
   color: #ffffff;
+
+  padding: 0 15px;
 }
 
 h1,
@@ -53,8 +55,7 @@ img {
   max-width: 390px;
 
   margin: 0 auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 0;
 }
 
 /* ================================= animation ================================ */
@@ -742,6 +743,7 @@ img {
   border-radius: 50%;
   background: conic-gradient(#007bff 0deg 180deg, transparent 180deg 360deg);
   mask: radial-gradient(circle 95px, transparent 90px, white 99%);
+  -webkit-mask: radial-gradient(circle 95px, transparent 90px, white 99%);
 }
 
 .circle-icon-svg {
@@ -895,7 +897,8 @@ img {
 
 /* ================================= footer ================================ */
 
-.footer-cont {
+#footer-main {
+  text-align: center;
   padding-top: 70px;
   padding-bottom: 30px;
 }
@@ -965,13 +968,6 @@ img {
   font-size: 14px;
   line-height: 1.5;
   color: #e4e4e7;
-}
-
-.footer-sub-branches {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .footer-sub-branches-title {
@@ -1518,7 +1514,7 @@ img {
 
   /* ================================= footer ================================ */
 
-  .footer-cont {
+  #footer-main {
     padding-top: 45px;
     padding-bottom: 30px;
   }
