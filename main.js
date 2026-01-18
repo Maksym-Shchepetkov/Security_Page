@@ -7,6 +7,7 @@ const headerCont = document.querySelector('.header-cont');
 const headerMobMenuLinks = document.querySelectorAll('.mob-menu-link');
 const closeBtn = document.querySelector('.mob-menu-close-btn');
 const headerAnchorLink = document.querySelectorAll('.header-link');
+const vac = document.querySelector('.vac-item');
 const invite = document.querySelector('#goToForm');
 const mainForm = document.querySelector('#form-main');
 const ul = document.querySelector('.ob-list');
@@ -37,6 +38,14 @@ const closeMenu = () => {
   logo.classList.remove('hidden');
   contacts.classList.remove('hidden');
 };
+
+document.querySelectorAll('.vac-item').forEach(li => {
+  li.addEventListener('click', () => {
+    const title = li.querySelector('.vac-sub-title').textContent.trim();
+    document.querySelector('.hidden-vac').value = title;
+    firstInputFocus();
+  });
+});
 
 const firstInputFocus = () => {
   setTimeout(() => {
@@ -92,6 +101,7 @@ mainForm.addEventListener('submit', async e => {
 
   const name = f.name.value.trim();
   const phone = f.phone.value.trim();
+  const selected = f.selected.value.trim();
 
   const nameError = validateName(name);
   if (nameError) {
@@ -119,7 +129,7 @@ mainForm.addEventListener('submit', async e => {
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, phone }),
+        body: JSON.stringify({ selected, name, phone }),
       }
     );
 

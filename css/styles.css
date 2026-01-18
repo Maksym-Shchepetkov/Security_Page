@@ -627,6 +627,20 @@ img {
   line-height: 1.5;
 }
 
+.hidden-vac {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .vac-form-input {
   border-radius: 140px;
 
@@ -764,7 +778,7 @@ img {
 
   font-size: 14px;
 
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .branch-loc {
@@ -1460,8 +1474,6 @@ img {
 
   .branch-sub-title {
     font-size: 16px;
-
-    margin-bottom: 0;
   }
 
   .branch-loc {
@@ -1920,6 +1932,11 @@ img {
     height: 500px;
   }
 
+  .vac-item:hover,
+  .vac-item:focus {
+    scale: 1.025;
+  }
+
   .vac-sub-title {
     font-size: 22px;
   }
@@ -1997,7 +2014,7 @@ img {
     color: #1c1c1c;
   }
 
-  /* ================================= vacancies-desktop ================================ */
+  /* ================================= sub-branches-desktop ================================ */
 
   .branch-title {
     font-size: 48px;
@@ -2017,7 +2034,9 @@ img {
   }
 
   .branch-sub-title {
-    font-size: 18px;
+    font-size: 17px;
+
+    margin-bottom: 10px;
   }
 
   .branch-loc {
